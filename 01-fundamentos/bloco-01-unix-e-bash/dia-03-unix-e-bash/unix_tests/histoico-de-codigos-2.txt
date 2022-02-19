@@ -1,0 +1,16 @@
+    1  clear
+    2  \ncurl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+    3  cat countries.txt
+    4  less countries.txt
+    5  grep -l "brazil" countries.txt
+    6  grep -i "brazil" countries.txt
+    7  cat phrases.txt
+    8  cat > phrases.txt
+    9  grep -i "fox" phrases.txt
+   10  wc -w phrases.txt
+   11  wc -l phrases.txt
+   12  touch empty.tbt empty.txt
+   13  ls
+   14  ls *.txt
+   15  ls *.t?t
+   16  man ls
