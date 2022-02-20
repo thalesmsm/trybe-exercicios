@@ -1,0 +1,52 @@
+    1  mkdir unix_tests
+    2  cd unix_tests
+    3  cat > skills2.txt
+    4  cat >> skills2.txt
+    5  wc -l skills2.txt
+    6  sort skills2.txt | head -3 > top_skills.txt
+    7  cat top_skills.txt
+    8  cat > phrases2.txt
+    9  grep -i 'br' phrases2.txt| wc -l
+   10  grep -iv 'br' phrases2.txt| wc -l
+   11  cat >> phrases2.txt
+   12  ls
+   13  cd ../
+   14  ls
+   15  cd ../
+   16  ls
+   17  mv dia-03-unix-e-bash/unix_tests/countries.txt ./dia-04-unix-e-bash/unix_tests
+   18  cd dia-04-unix-e-bash
+   19  ls
+   20  cd unix_tests
+   21  ls
+   22  ca phrases2.txt countries.txt >> bunch_of_things.txt
+   23  cat phrases2.txt countries.txt >> bunch_of_things.txt
+   24  sort -o bunch_of_things.txt bunch_of_things.txt
+   25  cat bunch_of_things.txt
+   26  git status
+   27  git add .
+   28  git status
+   29  git commit -m "Exercicios dia 04"
+   30  git push origin main
+   31  git status
+   32  git restore countries.txt
+   33  git commit -m "countries"
+   34  git status
+   35  git checkout main
+   36  git merge exercicios/1.4
+   37  git branch main
+   38  cd ../../
+   39  git merge exercicios/1.4
+   40  git push origin main
+   41  cd dia-04-unix-e-bash
+   42  ls
+   43  cd unix_tests
+   44  git checkout exercicios/1.4
+   45  git checkout main
+   46  cd ~
+   47  history 
+   48  cd trybe-exercicios
+   49  cd ./01-fundamentos/bloco-01-unix-e-bash/dia-04-unix-e-bash
+   50  ls
+   51  cd unix_tests
+   52  git checkout exercicios/1.4
