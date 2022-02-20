@@ -18,7 +18,7 @@ Criação de um arquivo com a possibilidade de inserção de conteúdo através 
 Mostrar o conteúdo inteiro na tela do terminal com o `cat`. Repare que aqui não se usa o sinal de maior `>`;
 Copiar e remover os arquivos com o `cp` e `rm` respectivamente;
 Remover tanto arquivos como diretórios sem que o sistema peça permissão com o `rm -rf`;
-Mover o arquivo para um diretório usando o `mv`, que também podeser usado para mudar o nome do arquivo e também de um diretório.
+Mover o arquivo para um diretório usando o `mv`, que também pode ser usado para mudar o nome do arquivo e também de um diretório.
 
 Com os arquivos e seus respectivos conteúdos criados, pude, ainda através de comandos no terminal, exibir estes conteúdos.
 Usando o `less` mostramos na tela do terminal o conteúdo página por página, podendo procurar por um trecho específico fazendo uso do comando `/trecho que quer procurar` e usano `q` para sair da tela de exibição;
