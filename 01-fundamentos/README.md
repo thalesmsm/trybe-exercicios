@@ -1,4 +1,4 @@
-# Bloco o1: Unix & Bash
+# Bloco 01: Unix & Bash
 
 Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.trybe.com/). Nesse bloco aprendi sobre como é montado o Unix e todos os seus níveis, passando por conceitos a respeito do `Kernel`, responsável por fazer a interação entre os softwares e hardwares. Também conhecemos o `Shell`, interface entre o sistema operacional, usuário e núcleo do sistema. Em geral, o shell dos sistemas operacionais usam uma `Command Line Interface (CLI)` ou uma `Graphical User Interface (GUI)` onde sua função é ler a linha de comando; interpretar seu significado; executar o comando e devolver o resultado ao usuário.
 
