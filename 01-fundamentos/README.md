@@ -1,6 +1,7 @@
 # Bloco 01: Unix & Bash
+## Dia 3
 
-Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.trybe.com/). Nesse bloco aprendi sobre como é montado o Unix e todos os seus níveis, passando por conceitos a respeito do `Kernel`, responsável por fazer a interação entre os softwares e hardwares. Também conhecemos o `Shell`, interface entre o sistema operacional, usuário e núcleo do sistema. Em geral, o shell dos sistemas operacionais usam uma `Command Line Interface (CLI)` ou uma `Graphical User Interface (GUI)` onde sua função é ler a linha de comando; interpretar seu significado; executar o comando e devolver o resultado ao usuário.
+Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.trybe.com/). Nesse bloco aprendi sobre como é montado o `Unix` e todos os seus níveis, passando por conceitos a respeito do `Kernel`, responsável por fazer a interação entre os softwares e hardwares. Também conhecemos o `Shell`, interface entre o sistema operacional, usuário e núcleo do sistema. Em geral, o shell dos sistemas operacionais usam uma `Command Line Interface (CLI)` ou uma `Graphical User Interface (GUI)` onde sua função é ler a linha de comando; interpretar seu significado; executar o comando e devolver o resultado ao usuário.
 
 Vimos também a respeito dos `Aplicativos`. Nessa camada se encaixa os `Softwares` que os usuários podem utilizar e a maioria dos comandos unix. 
 
@@ -29,3 +30,29 @@ Podemos mostrar trechos dos arquivos separadamente usando o `grep`, que é um co
 Ainda é possível negar o comando com o `-v` e procurar pelo conteúdo que `não` contenha o trecho especificado no comando, além de mostrar a posição do trecho com o `-n` e quantas vezes uma palavra aparece no arquivo com `-c`.
 
 E ainda com o comando `wc` mostrar o número de linhas, palavras e números de caracteres contidos em um arquivo. Podendo mostrar separadamente cada um usando `-l`, `-w` e `-c` respectivamente. 
+##
+
+## Dia 4
+
+Voltando ao processos, foi aprendido como,de fato, se lista os processos sendo executados, identificados pelo `PID`, que é representado por um sequência numérica, para isso é utilizado o comando `ps`.
+
+Vimos que é possível ter vários processos sendo executados ao mesmo tempo, desde que esteja em `background` enquanto se executa outro processo.
+Para inicar um processo diretamente no `background`, damos o coamdno de inicialização do processo seguido do `bg`.
+
+Um processo que está em `foreground` não permite que seja executado um outro ao mesmo tempo. Para isso deve-se suspendê-lo usando o `ctrl + z` e por através do uso do `bg` em `background`;<br>
+O inverso também é possível e podemos trazer para o `foreground` um processo suspenso usando o `fg %n` onde o `n` é o número do processo, que podemos verificar usando o comando `jobs`, que nos permite ver o número do processo e seu status;<br>
+Processos em `foreground` (que estejam sendo executados) podem ser cancelados usando o `ctrl + c`, assim como com `kill %n` usando o número do processo e o`kill PID`, usando o número do PID. O `kill -9 PID` força o encerramento.
+
+Outra parte importante dos estudos veio com o aprendizado do comando `find`, usado para pesquisar em diretórios por arquivos ou outras pastas, de acordo com os parâmetros passados a ele, como: `name`, `date`, `size` e `type`<br>
+Ex.: `find ./diretorio -name "*.txt"` -> localizar todos os arquivos de extensão `.txt`;<br>
+`find ./diretorio -name "nome*"` -> localizar todos os arquivos que comecem com "nome";<br>
+`find . -type d` -> para localizar todos os diretórios;<br>
+`find . -type f` -> para localizar todos os arquivos.<br>
+Podemos ainda usar mais de um dos parâmetros para filtrar ainda mais a busca.<br>
+Ex.: `find . -type f -name "nome*"` -> para localizar SOMENTE arquivos que comecem com "nome";<br>
+`find . -type d -name "nome*"` -> para localizar SOMENTE diretórios que comecem com "nome".
+
+Por fim, vimos como pode ser usado o comando `echo`.<br>
+Usado em `scripts` ou no terminal para exibir/adiconar mensagens à tela ou arquivos.<br>
+`echo "texto"` -> exibi texto na tela;<br>
+`echo "texto" > arquivo.txt` -> adiciona o texto em arquivo.
