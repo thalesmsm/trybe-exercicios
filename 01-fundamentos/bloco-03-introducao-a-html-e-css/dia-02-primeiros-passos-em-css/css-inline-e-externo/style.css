@@ -1,23 +1,21 @@
-body {
-  font-size: 16px;
-}
-
 h1 {
-  font-size: 65px;
   font-family: sans-serif;
-  color: orange;
+  text-align: center;
 }
 
 p {
   font-weight: 600;
   font-size: 3em;
-  font-style: italic;
+}
+
+body {
+  font-size: 16px;
 }
 
 ul {
-  background-color: lightblue;
-  line-height: 33px;
+  font-style: italic;
   text-decoration: underline;
+  line-height: 40px;
 }
 
 #amarelo {
@@ -30,8 +28,4 @@ ul {
 
 #marrom {
   background-color: brown;
-}
-
-.cores {
-  color: rgb(84, 151, 87);
 }
