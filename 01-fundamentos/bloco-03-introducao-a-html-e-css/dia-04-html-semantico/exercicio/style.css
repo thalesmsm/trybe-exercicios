@@ -74,13 +74,14 @@ body {
 
 .geralInfo table {
   border-collapse: collapse;
-  margin: auto;
+  margin: 10px auto;
 }
 
-.geralInfo td {
+.geralInfo th,td {
   border: 1px solid black;
   padding: 5px;
-
+  text-align: center;
+  vertical-align: middle;
 }
 
 .iterestingFacts{
