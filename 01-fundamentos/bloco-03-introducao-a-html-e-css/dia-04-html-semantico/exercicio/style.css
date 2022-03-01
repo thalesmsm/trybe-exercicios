@@ -72,6 +72,17 @@ body {
   line-height: 25px;
 }
 
+.geralInfo table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.geralInfo td {
+  border: 1px solid black;
+  padding: 5px;
+
+}
+
 .iterestingFacts{
   overflow: auto;
   margin: 20px 0;
