@@ -47,7 +47,6 @@ body {
 
 .navegation_list li:hover {
   background-color: rgb(91, 180, 151);
-  cursor: pointer;
 }
 
 .content {
