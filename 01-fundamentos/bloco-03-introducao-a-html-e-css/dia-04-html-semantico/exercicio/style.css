@@ -22,31 +22,31 @@ body {
 }
 
 .navegation {
-  display: flex;
-  justify-content: space-between;
   background-color: rgb(43, 110, 88);
   padding: 0 10px ;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
 }
 
-.navegation_list a {
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-  text-decoration: none;
-  margin-right: 10px;
-  padding: 5px;
+.navegation_list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navegation_list li {
   border-left: 1px solid rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  margin-right: 20px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  list-style-type: none;
+
 }
 
-.navegation_list a:hover {
+.navegation_list li:hover {
   background-color: rgb(91, 180, 151);
-}
-
-.navegation_list a li {
-  list-style: none;
 }
 
 .content {
