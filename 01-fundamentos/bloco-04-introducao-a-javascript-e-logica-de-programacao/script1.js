@@ -1,8 +1,8 @@
-const a = 20;
-const b = 12;
+const num1 = 23;
+const num2 = 65;
 
-console.log(`${a} + ${b} = ${a + b}`)
-console.log(`${a} - ${b} = ${a - b}`)
-console.log(`${a} * ${b} = ${a * b}`)
-console.log(`${a} / ${b} = ${a / b}`)
-console.log(`${a} ** ${b} = ${a ** b}`)
+if (num1 > num2) {
+  console.log(num1 + ' é o maior numero')
+} else {
+  console.log(num2 + ' é o maior numero')
+}
