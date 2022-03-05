@@ -1,8 +1,9 @@
-const num1 = 23;
-const num2 = 65;
+const a = 3;
+const b = 7;
 
-if (num1 > num2) {
-  console.log(num1 + ' é o maior numero')
-} else {
-  console.log(num2 + ' é o maior numero')
-}
+console.log('Soma = ' + (a + b));
+console.log('Subtração = ' + (a - b));
+console.log('Multiplicação = ' + (a * b));
+console.log('Divisão = ' + (a / b));
+console.log('Exponenciação = ' + (a ** b));
+console.log('Módulo = ' + (a % b));
