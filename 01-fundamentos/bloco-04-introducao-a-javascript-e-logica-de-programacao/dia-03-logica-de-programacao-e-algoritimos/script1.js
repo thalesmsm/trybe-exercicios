@@ -11,7 +11,7 @@ console.log(res);
 
 let word = "socorram me subi no onibus em marrocos";
 let reverse = '';
-for (i = word.length -1; i >= 0; i -= 1) {
+for (i = word.length - 1; i >= 0; i -= 1) {
   reverse += word[i]
 }
 console.log(reverse);
@@ -21,15 +21,15 @@ console.log(reverse);
 let array = ['java', 'javascript', 'python', 'html', 'css'];
 let maior = array[0];
 let menor = array[0];
-for (i = 0; i < array.length; i += 1) {    
+for (i = 0; i < array.length; i += 1) {
   if (array[i].length > maior.length) {
-    maior = array[i];   
+    maior = array[i];
   }
 }
 
-for (i = 0; i < array.length; i += 1) {    
+for (i = 0; i < array.length; i += 1) {
   if (array[i].length < menor.length) {
-    menor = array[i];   
+    menor = array[i];
   }
 }
 
