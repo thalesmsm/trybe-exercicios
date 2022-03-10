@@ -1,3 +1,5 @@
+//EXERCICIOS PARA FIXAR
+
 // Crie um objeto player contendo as variáveis listadas abaixo.
 // let name = 'Marta';
 // let lastName = 'Silva';
