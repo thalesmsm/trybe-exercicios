@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    let ondeEstou = document.getElementById("elementoOndeVoceEsta");
+    let primeiroDoFilho = document.getElementById("primeiroFilhoDoFilho");
+
+    console.log(document.getElementById("elementoOndeVoceEsta"));
+    console.log(document.getElementById("elementoOndeVoceEsta").parentElement.style.color = 'green');
+    console.log(document.getElementById("elementoOndeVoceEsta").firstElementChild.innerText = "First Child!");
+    console.log(document.getElementById("pai").firstElementChild);
+    console.log(document.getElementById("elementoOndeVoceEsta").previousElementSibling);
+    console.log(document.getElementById("elementoOndeVoceEsta").nextSibling);
+    console.log(document.getElementById("elementoOndeVoceEsta").nextElementSibling);
+    console.log(document.getElementById("pai").children[2]);
+
+    let newSibling = document.createElement('section');
+
+    document.getElementById("pai").appendChild(newSibling);
+    newSibling.id = 'newSibling';
+    console.log(newSibling);
+
+    let newChild = document.createElement('section');
+
+    document.getElementById("elementoOndeVoceEsta").appendChild(newChild);
+    newChild.id = 'newChild';
+    console.log(newChild);
+
+    let newChildsChild = document.createElement('section');
+
+    document.getElementById("primeiroFilhoDoFilho").appendChild(newChildsChild);
+    newChildsChild.id = 'newChildsChild';
+    console.log(newChildsChild);
+    console.log(newChildsChild.parentElement.parentElement.nextElementSibling);
+
+    let paiDeTodos = document.getElementById('pai');
+
+    paiDeTodos.removeChild(primeiroFilho);
+    paiDeTodos.removeChild(terceiroFilho);
+    paiDeTodos.removeChild(quartoEUltimoFilho);
+    paiDeTodos.removeChild(newSibling);
+
+    ondeEstou.removeChild(segundoEUltimoFilhoDoFilho);
+    ondeEstou.removeChild(newChild);
+
+    primeiroDoFilho.removeChild(newChildsChild);
+
+    console.log(document.getElementById('paiDoPai'));
+  </script>
+</body>
+
+</html>
