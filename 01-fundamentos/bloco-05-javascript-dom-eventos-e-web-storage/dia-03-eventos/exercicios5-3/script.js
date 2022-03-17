@@ -43,10 +43,10 @@ function showHolidays() {
 
   feriado.addEventListener('click', function () {
     for (let i = 0; i < document.getElementsByClassName('holiday').length; i += 1) {
-      if (document.getElementsByClassName('holiday')[i].style.backgroundColor === 'lightblue') {
-        document.getElementsByClassName('holiday')[i].style.backgroundColor = 'rgb(238,238,238)';
+      if (document.getElementsByClassName('holiday')[i].style.color === 'rgb(233, 119, 119)') {
+        document.getElementsByClassName('holiday')[i].style.color = '#777';
       } else {
-        document.getElementsByClassName('holiday')[i].style.backgroundColor = 'lightblue';
+        document.getElementsByClassName('holiday')[i].style.color = 'rgb(233, 119, 119)';
       }
     }
   })
@@ -77,21 +77,72 @@ function showSextou(fridayDays) {
 }
 showSextou([4, 11, 18, 25]);
 
-for (let i = 0; i < 33; i += 1) {
+for (let i = 0; i < document.querySelectorAll('.day').length; i += 1) {
   let dayfocused = document.querySelectorAll('.day')[i];
 
-  console.log(dayfocused.length);
-  
   function changeFontSize(event) {
     event.target.style.fontSize = '10px';
     event.target.style.transition = '0.2s';
     event.target.style.cursor = 'default';
-    
   }
   dayfocused.addEventListener('mouseover', changeFontSize)
   dayfocused.addEventListener('mouseout', reChangeFontSize)
-  
+
   function reChangeFontSize(event) {
     event.target.style.fontSize = '20px';
   }
+}
+
+// Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function createTask(tarefa) {
+  let task = document.createElement('span');
+  task.innerText = tarefa
+  document.querySelector('.my-tasks').appendChild(task)
+}
+
+createTask('Estudar:');
+
+//Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+//O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+//O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+let taskColor = document.createElement('div');
+function giveTaskColor(color) {
+  taskColor.className = 'task'
+  taskColor.style.backgroundColor = color;
+  document.querySelector('.my-tasks').appendChild(taskColor)
+}
+giveTaskColor('blue')
+
+
+//Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+//Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+const element = document.querySelector(".my-tasks").lastChild;
+function changeClass(event) {
+  if (element.className == 'task'){
+    event.target.classList.add("selected");
+  } else {
+    event.target.classList.remove("selected")
+  }
+}
+
+element.addEventListener('click', changeClass)
+
+// Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+
+for (let i = 0; i < document.querySelectorAll('.day').length; i += 1) {
+  const dayFocused = document.querySelectorAll('.day')[i];
+  function changeDayColor(){
+    if (dayFocused.style.color == taskColor.style.backgroundColor) {
+      dayFocused.style.color = '#777'
+    } else {
+      dayFocused.style.color = taskColor.style.backgroundColor
+    }
+  }
+  dayFocused.addEventListener('click', changeDayColor)
+
 }
