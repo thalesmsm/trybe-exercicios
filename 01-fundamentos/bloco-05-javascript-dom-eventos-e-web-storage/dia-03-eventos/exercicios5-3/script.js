@@ -76,3 +76,22 @@ function showSextou(fridayDays) {
 
 }
 showSextou([4, 11, 18, 25]);
+
+for (let i = 0; i < 33; i += 1) {
+  let dayfocused = document.querySelectorAll('.day')[i];
+
+  console.log(dayfocused.length);
+  
+  function changeFontSize(event) {
+    event.target.style.fontSize = '10px';
+    event.target.style.transition = '0.2s';
+    event.target.style.cursor = 'default';
+    
+  }
+  dayfocused.addEventListener('mouseover', changeFontSize)
+  dayfocused.addEventListener('mouseout', reChangeFontSize)
+  
+  function reChangeFontSize(event) {
+    event.target.style.fontSize = '20px';
+  }
+}
