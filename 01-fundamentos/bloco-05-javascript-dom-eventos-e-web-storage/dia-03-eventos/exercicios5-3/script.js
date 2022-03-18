@@ -81,7 +81,7 @@ for (let i = 0; i < document.querySelectorAll('.day').length; i += 1) {
   let dayfocused = document.querySelectorAll('.day')[i];
 
   function changeFontSize(event) {
-    event.target.style.fontSize = '10px';
+    event.target.style.fontSize = '15px';
     event.target.style.transition = '0.2s';
     event.target.style.cursor = 'default';
   }
@@ -124,8 +124,14 @@ const element = document.querySelector(".my-tasks").lastChild;
 function changeClass(event) {
   if (element.className == 'task'){
     event.target.classList.add("selected");
+    event.target.style.width = '45px'
+    event.target.style.height = '45px'
+    event.target.style.transition = '0.2s';
+    event.target.style.cursor = 'pointer';
   } else {
-    event.target.classList.remove("selected")
+    event.target.classList.remove("selected");
+    event.target.style.width = '35px';
+    event.target.style.height = '35px';
   }
 }
 
@@ -137,10 +143,12 @@ element.addEventListener('click', changeClass)
 for (let i = 0; i < document.querySelectorAll('.day').length; i += 1) {
   const dayFocused = document.querySelectorAll('.day')[i];
   function changeDayColor(){
-    if (dayFocused.style.color == taskColor.style.backgroundColor) {
-      dayFocused.style.color = '#777'
-    } else {
-      dayFocused.style.color = taskColor.style.backgroundColor
+    if (element.className == 'task selected'){
+      if (dayFocused.style.color == taskColor.style.backgroundColor) {
+        dayFocused.style.color = '#777'
+      } else {
+        dayFocused.style.color = taskColor.style.backgroundColor
+      } 
     }
   }
   dayFocused.addEventListener('click', changeDayColor)
