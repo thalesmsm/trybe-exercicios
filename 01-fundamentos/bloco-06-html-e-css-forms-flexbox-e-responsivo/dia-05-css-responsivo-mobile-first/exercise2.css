@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  /* width: 80%; */
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.233);
+  line-height: 1.5em;
+  font-size: 0.9em;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(162, 204, 218, 0.425)
+}
+
+header p {
+  margin-top: 0;
+  font-size: 1.7em;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li{
+  margin: 0 10px;
+
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+#asides {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#asides ul {
+  padding: 0;
+}
+
+.main-content {
+  text-align: justify;
+  padding: 10px 20px;
+}
+
+footer {
+  padding: 10px 20px;
+  background-color: rgba(162, 204, 218, 0.425)
+}
+
+@media screen and (min-width: 680px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  header p {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  #asides {
+
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .aside-two {
+    align-self: center;
+  }
+}
+
+@media  screen and (min-width: 1020px) {
+  #asides {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  .aside-one ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .aside-two ul {
+    display: flex;
+    /* width: 100%; */
+  }
+
+  .aside-two ul li{
+    margin: 0 10px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+
+  header p {
+    margin: 0;
+    font-size: 2em;
+    justify-self: center;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .container {
+    font-size: 1.1em;
+    width: 80%;
+  }
+
+}
