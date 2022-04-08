@@ -10,4 +10,4 @@ const showEmailList = (email) => {
   console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
 };
 
-emailListInData.forEach((element) => showEmailList(element)); 
+emailListInData.forEach(showEmailList); 
