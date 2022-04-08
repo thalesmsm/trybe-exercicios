@@ -7,15 +7,17 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
-people.sort((a, b) => {
-  if (a.age > b.age) {
-    return 1;
-  }
-  if (a.age < b.age) {
-    return -1;
-  }
-  return 0;
-});
+people.sort((a, b) => a.age - b.age)
+
+// people.sort((a, b) => {
+//   if (a.age > b.age) {
+//     return 1;
+//   }
+//   if (a.age < b.age) {
+//     return -1;
+//   }
+//   return 0;
+// });
 
 console.log(people);
 
@@ -29,14 +31,6 @@ const peopleReverse = [
   { name: 'Bruna', age: 19 },
 ];
 
-peopleReverse.sort((a, b) => {
-  if (a.age < b.age) {
-    return 1;
-  }
-  if (a.age > b.age) {
-    return -1;
-  }
-  return 0;
-});
+peopleReverse.sort((a, b) => b.age - a.age);
 
 console.log(peopleReverse);
