@@ -63,6 +63,9 @@ const books = [
 
 // 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
+// as idades são colculadas pela diferença do ano de lançamento como ano de nasciemnto
+// a const soma recebe o valor do acc que recebe os valores da idade e faz a soma entre eles
+// a media é dada da divisao dessa soma pela quantidade de livros que conter no array books
 function averageAge() {
   const divisor = books.length;
   const soma = books.reduce((acc, curr) => {

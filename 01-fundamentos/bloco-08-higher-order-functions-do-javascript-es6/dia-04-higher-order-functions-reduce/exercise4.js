@@ -63,8 +63,7 @@ const books = [
 
 // 4 - Encontre o livro com maior nome
 
-
-
+// o reduce passa por todos os nomes dos livros verificando se algum é maior do que o anterior, retornando o maior
 function longestNamedBook() {
   return books.reduce((acc, curr) => {
     if (curr.name.length > acc.name.length) {

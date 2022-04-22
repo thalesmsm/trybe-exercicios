@@ -62,11 +62,12 @@ const books = [
 ];
 
 // 2 - Crie uma string com os nomes de todas as pessoas autoras.
-
+// o acc recebe uma string vazia para onde irá os nomes dos autores. a condição serve para reconhecer se é a ultma pessoa para por um ponto final
+// a função nativa trim retira um espaço vazio no começo, criado pelo acc receber o seu primeiro valor como vazio
 function reduceNames() {
-  const names =  books.reduce((acc, book, index, array) => {
-    if (index === array.length - 1) return `${acc} ${book.author.name}.`;
-    return `${acc} ${book.author.name},`;
+  const names =  books.reduce((acc, curr, index, array) => {
+    if (index === array.length - 1) return `${acc} ${curr.author.name}.`;
+    return `${acc} ${curr.author.name},`;
   }, '');
   return names.trim();
 }
