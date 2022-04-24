@@ -4,7 +4,7 @@ const uppercase = (str, callback) => {
   }, 500);
 };
 // como a função simula uma operação assincrona devemos usar o try/catch junto da função done para evitar os falso-positivos
-it ('Função retorna string toda em maiúsculas', (done) => {
+it ('Função retorna string em letras maiúsculas', (done) => {
   uppercase ('string', (str) =>{
     try {
       expect(str).toBe('STRING');
